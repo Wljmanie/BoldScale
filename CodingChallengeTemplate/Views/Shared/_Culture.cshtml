@@ -1,0 +1,35 @@
+﻿@inject IViewLocalizer localizer
+@inject Microsoft.Extensions.Options.IOptions<Microsoft.AspNetCore.Builder.RequestLocalizationOptions> locOptions
+
+@{
+    var culture = Context.Features.Get<Microsoft.AspNetCore.Localization.IRequestCultureFeature>();
+    var cultureList = locOptions.Value.SupportedUICultures.Select(x => new SelectListItem { Value = x.Name, Text = localizer.GetString(x.Name) }).ToList();
+    var returnUrl = string.IsNullOrWhiteSpace(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}{Context.Request.QueryString}";
+}
+
+<div class="row">
+    <div class="col d-flex justify-content-center">
+        <a asp-action="CultureManagement" asp-controller="Home" asp-route-returnUrl="@returnUrl" asp-route-culture="nl-NL">
+            @if (culture.RequestCulture.Culture.Name == "nl-NL")
+            {
+                <img class="flag-image" src="~/img/LanguageFlags/FlagColorNL.png" alt=@localizer["Dutch Flag"]/>           
+            }
+            else
+            {
+                <img class="flag-image" src="~/img/LanguageFlags/FlagSemiGrayNL.png" alt=@localizer["Dutch Flag in Grey"]/>
+            }
+        </a>
+    </div>
+    <div class="col d-flex justify-content-center">
+        <a asp-action="CultureManagement" asp-controller="Home" asp-route-returnUrl="@returnUrl" asp-route-culture="en-US">
+            @if (culture.RequestCulture.Culture.Name == "en-US")
+            {
+                <img class="flag-image" src="~/img/LanguageFlags/FlagColorUS.png" alt=@localizer["American Flag"] />
+            }
+            else
+            {   
+                <img class="flag-image" src="~/img/LanguageFlags/FlagSemiGrayUS.png" alt=@localizer["American Flag in Grey"] />
+            }
+        </a>
+    </div>
+</div>

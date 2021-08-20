@@ -1,0 +1,166 @@
+﻿/*--- Setting the Colors of the template. ---*/
+:root {
+    --primary-bg-color: #3C424D;
+    --secondary-bg-color: #1B1D22;
+    --third-bg-color: #2D3139; /*Not used at the moment, but I like to save the color.*/
+    --a-light-color: #FFF8EB;
+    --secondary-light-color: #046985;
+    --primary-light-color: #4BBDCC;
+    --prim-font: 'Anton', sans-serif;
+    --sec-font: 'Roboto', sans-serif;
+}
+
+.icon-bs {
+    color: #7A43B6;
+}
+
+.icon-css3 {
+    color: #2965f1;
+}
+
+.icon-html5 {
+    color: #e34f26;
+}
+
+.icon-js {
+    color: #f7df1e;
+}
+
+.navbar-brand {
+    margin-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    font-family: var(--prim-font);
+}
+
+.regular-text {
+    font-family: var(--sec-font);
+    color: var(--a-light-color);
+}
+
+a.regular-text{
+    text-decoration:none;
+    color : var(--secondary-light-color);
+}
+
+    a.regular-text:hover{
+        color: var(--primary-light-color)
+    }
+    a.regular-text:focus{
+        color: var(--secondary-light-color);
+    }
+
+.header-text{
+    color: var(--primary-light-color);
+    font-family: var(--sec-font);
+}
+
+a.navbar-brand {
+  color: var(--primary-light-color);
+  /*font-weight: bold;*/
+  /*font-style: italic;*/
+}
+
+.nav-width-fix{
+    min-width : 110px;
+}
+@media (min-width: 992px){
+    .nav-width-fix{
+        min-width: 0px;
+    }
+}
+@media(max-width: 340px){  /*Adjust this size based on the length of the name of the app.*/
+    .nav-width-fix{
+        min-width: 0px;
+    }
+}
+
+/*--- Sticky Header styles ---*/
+.navbar {
+    background-color: var(--primary-bg-color);
+}
+
+.nav-link {
+    color: var(--secondary-light-color);
+    font-weight: bold;
+}
+
+    .nav-link:hover {
+        color: var(--primary-light-color);
+    }
+    .nav-link:focus {
+        color: var(--secondary-light-color);
+    }
+    
+    
+
+.active{
+    color: var(--primary-light-color);  
+}
+
+.flag-image{
+    max-height : 80px;
+}
+@media (min-width: 992px) {
+    .flag-image {
+        max-height: 40px;
+    }
+}
+
+.border-bottom{
+  color:var(--a-light-color) !important; 
+}
+
+.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
+    color: var(--secondary-light-color);
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.menu-background{
+    background-color: var(--third-bg-color);
+}
+
+/*--- Body styles. ---*/
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color: var(--secondary-bg-color);
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+/*--- Footer styles ---*/
+.footer{
+    background-color: var(--primary-bg-color);
+}
+
+.border-top{
+  color: var(--a-light-color) !important; 
+}
+
+.footer-icons{
+  color: var(--secondary-light-color);
+  
+}
+.footer-icons:hover{
+  color: var(--primary-light-color);
+}
+
+.footer-personal-logo{
+  width: 100%;
+  height: auto;
+  max-height: 25px;
+}
