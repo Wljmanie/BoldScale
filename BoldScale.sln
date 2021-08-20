@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingChallengeTemplate", "CodingChallengeTemplate\CodingChallengeTemplate.csproj", "{8B6F729D-30C7-4A0E-BBA3-5BBE512D0007}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoldScale", "BoldScale\BoldScale.csproj", "{8B6F729D-30C7-4A0E-BBA3-5BBE512D0007}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

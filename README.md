@@ -1,6 +1,6 @@
-# Coding Challenge Template
+# Bold Scale
 
-This is a template I created to safe time to solve coding challenges in web apps.
+This is a coding challenge work in progress.
 
 The following things needs to be done besides the content.
 
